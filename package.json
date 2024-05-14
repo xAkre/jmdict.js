@@ -1,0 +1,28 @@
+{
+    "name": "jmdict.js",
+    "version": "0.0.1",
+    "description": "jmdict.js is a library for working with JMdict",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc && tsc-alias"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/xAkre/jmdict.js.git"
+    },
+    "keywords": [
+        "Japanese",
+        "JMdict"
+    ],
+    "author": "xAkre",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/xAkre/jmdict.js/issues"
+    },
+    "homepage": "https://github.com/xAkre/jmdict.js#readme",
+    "dependencies": {
+        "@types/node": "^20.12.12",
+        "tsc-alias": "^1.8.10",
+        "typescript": "^5.4.5"
+    }
+}
