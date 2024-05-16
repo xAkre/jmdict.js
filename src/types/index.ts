@@ -4,11 +4,11 @@
  * https://www.edrdg.org/jmdict/jmdict_dtd_h.html
  */
 
-interface Entry {
+interface JMdictEntry {
     id: string;
-    kanji: KanjiElement[];
-    readings: ReadingElement[];
-    senses: Sense[];
+    kanji: JMdictKanjiElement[];
+    readings: JMdictReadingElement[];
+    senses: JMdictSense[];
 }
 
 /**
@@ -18,7 +18,7 @@ interface Entry {
  * orthographical variants of the same word. Sometimes mis-spellings may also be
  * included, provided they are labeled as so inside the information fields
  */
-interface KanjiElement {
+interface JMdictKanjiElement {
     /**
      * A kanji representation of the entry containing at least one non-kana
      * character
@@ -42,7 +42,7 @@ interface KanjiElement {
      *   the entry can be found, with "01" assigned to the first 500, "02"
      *   to the second, and so on.
      */
-    priority?: Priority[];
+    priority?: JMdictPriority[];
 
     /**
      * This array contains information relating to the orthography of the
@@ -58,7 +58,7 @@ interface KanjiElement {
  * such as in the case of a word or phrase entirely written in Kana,
  * these elements will define the entry
  */
-interface ReadingElement {
+interface JMdictReadingElement {
     /**
      * This property contains a reading for the entry, and is limited
      * to kana and other necessary characters
@@ -89,13 +89,13 @@ interface ReadingElement {
     /**
      * Same as {@link KanjiElement.priority}, but for the reading element
      */
-    priority?: Priority[];
+    priority?: JMdictPriority[];
 }
 
 /**
  * Priority codes for kanji and reading elements
  */
-type Priority =
+type JMdictPriority =
     | 'news1'
     | 'news2'
     | 'ichi1'
@@ -111,7 +111,7 @@ type Priority =
  * along with additional related details. In cases where there are multiple
  * distinct meanings for the word, several sense elements will be utilized
  */
-interface Sense {
+interface JMdictSense {
     /**
      * This array contains entity codes (resolved or not) that outline what
      * parts of speech the sense element belongs to
@@ -122,7 +122,7 @@ interface Sense {
      * This array contains cross-references to other entries that are related
      * to the sense element
      */
-    crossReferences: CrossReference[];
+    crossReferences: JMdictCrossReference[];
 
     /**
      * This array contains antonyms of the sense element. The contents of the
@@ -149,7 +149,7 @@ interface Sense {
     /**
      * This array contains information about the source of loan words
      */
-    sourceLanguages: LanguageSource[];
+    sourceLanguages: JMdictLanguageSource[];
 
     /**
      * This array contains entity codes (resolved or not) that associate the sense with
@@ -160,13 +160,13 @@ interface Sense {
     /**
      * This array contains glosses that provide translated equivalents of the Japanese word
      */
-    glosses: Gloss[];
+    glosses: JMdictGloss[];
 }
 
 /**
  * Cross-references are used to point to other entries
  */
-interface CrossReference {
+interface JMdictCrossReference {
     /**
      * The word that the cross-reference points to
      */
@@ -186,7 +186,7 @@ interface CrossReference {
 /**
  * Language sources are used to indicate the source language of a loan word
  */
-interface LanguageSource {
+interface JMdictLanguageSource {
     /**
      * The word in the source language
      */
@@ -201,7 +201,7 @@ interface LanguageSource {
      * Indicates whether the language source element fully or partially describes
      * the source word or phrase of the loanword. Possible values are 'full' and 'partial'
      */
-    type?: LanguageSourceType;
+    type?: JMdictLanguageSourceType;
 
     /**
      * Indicates that the Japanese word has been constructed from words in the
@@ -213,12 +213,12 @@ interface LanguageSource {
 /**
  * Possible language source types
  */
-type LanguageSourceType = 'full' | 'partial';
+type JMdictLanguageSourceType = 'full' | 'partial';
 
 /**
  * Glosses provide translated equivalents of Japanese words
  */
-interface Gloss {
+interface JMdictGloss {
     /**
      * The language code of the gloss
      */
@@ -227,7 +227,7 @@ interface Gloss {
     /**
      * Gender of the word in the target language
      */
-    gender?: GlossGender;
+    gender?: JMdictGlossGender;
 
     /**
      * The translated equivalent of the Japanese word
@@ -237,28 +237,28 @@ interface Gloss {
     /**
      * The type of gloss
      */
-    type?: GlossType;
+    type?: JMdictGlossType;
 }
 
 /**
  * Possible word genders
  */
-type GlossGender = 'masculine' | 'feminine' | 'neuter';
+type JMdictGlossGender = 'masculine' | 'feminine' | 'neuter';
 
 /**
  * Possible gloss types
  */
-type GlossType = 'figurative' | 'literal' | 'explanation' | 'trademark';
+type JMdictGlossType = 'figurative' | 'literal' | 'explanation' | 'trademark';
 
 export {
-    Entry,
-    KanjiElement,
-    ReadingElement,
-    Sense,
-    CrossReference,
-    LanguageSource,
-    Gloss,
-    LanguageSourceType,
-    GlossGender,
-    GlossType,
+    JMdictEntry,
+    JMdictKanjiElement,
+    JMdictReadingElement,
+    JMdictSense,
+    JMdictCrossReference,
+    JMdictLanguageSource,
+    JMdictGloss,
+    JMdictLanguageSourceType,
+    JMdictGlossGender,
+    JMdictGlossType,
 };
