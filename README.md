@@ -26,3 +26,12 @@ const xmlString = readFileSync('pathToJMdictFile.xml', 'utf8');
 const jmdict = await JMdictParser.fromXmlString(xmlString);
 const entries = jmdict.entries;
 ```
+
+### Parsing from a file
+
+```typescript
+import { JMdictParser } from 'jmdict.js';
+
+const jmdict = await JMdictParser.fromFile('pathToJMdictFile.xml');
+const entries = jmdict.entries;
+```

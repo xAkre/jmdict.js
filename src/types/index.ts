@@ -212,7 +212,7 @@ type JMdictLanguageSource =
            * Indicates whether the language source element fully or partially describes
            * the source word or phrase of the loanword. Possible values are 'full' and 'partial'
            */
-          type?: JMdictLanguageSourceType;
+          type: JMdictLanguageSourceType;
 
           /**
            * Indicates that the Japanese word has been constructed from words in the
@@ -574,7 +574,7 @@ interface ParsedSenseElement {
 interface ParsedLanguageSource {
     _: string;
     $: {
-        lang?: string;
+        'xml:lang'?: string;
         ls_type?: string;
         ls_wasei?: string;
     };

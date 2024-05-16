@@ -1,3 +1,4 @@
+import { readFileSync, PathLike } from 'fs';
 import { Parser, ParserOptions } from 'xml2js';
 import {
     JMdictEntry,
@@ -80,6 +81,29 @@ class JMdictParser {
         const entries = this.transformParsedData(parsedData);
 
         return new JMdict(entries);
+    }
+
+    /**
+     * Parse a JMdict from an XML file
+     *
+     * @param path - The path to the XML file to parse
+     * @param options - Optional parsing options
+     * @returns A JMdict object
+     * @throws {ParseError} If there is an error reading the file
+     */
+    static async fromXmlFile(
+        path: PathLike,
+        options: ParseOptions = defaultParseOptions
+    ): Promise<JMdict> {
+        let xmlString: string;
+
+        try {
+            xmlString = readFileSync(path, 'utf-8');
+        } catch (error) {
+            throw new ParseError(`Error reading JMdict file: ${error}`);
+        }
+
+        return this.fromXmlString(xmlString, options);
     }
 
     /**
@@ -299,7 +323,7 @@ class JMdictParser {
 
         return {
             word,
-            language: languageSource.$.lang ?? 'eng',
+            language: languageSource.$['xml:lang'] ?? 'eng',
             type: languageSource.$.ls_type === 'part' ? 'partial' : 'full',
             wasei: languageSource.$.ls_wasei ? true : undefined
         };

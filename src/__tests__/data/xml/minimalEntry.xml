@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE JMdict SYSTEM "./originalDtd.dtd">
+<JMdict>
+    <entry>
+        <ent_seq>100</ent_seq>
+        <r_ele>
+            <reb>日本</reb>
+        </r_ele>
+        <sense>
+            <gloss>
+                Japan
+            </gloss>
+        </sense>
+    </entry>
+</JMdict>
