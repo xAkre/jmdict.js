@@ -1,0 +1,10 @@
+/**
+ * Since tests are excluded from the build in the root tsconfig, vscode does not pick
+ * up path aliases. This config is used to include the test files so that vscode can
+ * resolve the path aliases
+ */
+{
+    "extends": "../../tsconfig.json",
+    "include": ["**/*.ts"],
+    "exclude": []
+}
