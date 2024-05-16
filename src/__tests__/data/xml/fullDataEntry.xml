@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE JMdict SYSTEM "./originalDtd.dtd">
+<JMdict>
+    <entry>
+        <ent_seq>100</ent_seq>
+        <k_ele>
+            <keb>日本</keb>
+            <ke_inf>Some additional information</ke_inf>
+            <ke_inf>Some other additional information</ke_inf>
+            <ke_pri>ichi1</ke_pri>
+            <ke_pri>news1</ke_pri>
+        </k_ele>
+        <r_ele>
+            <reb>にほん</reb>
+            <re_nokanji />
+            <re_restr>日本</re_restr>
+            <re_inf>Some additional information</re_inf>
+            <re_inf>Some other additional information</re_inf>
+            <re_pri>ichi1</re_pri>
+            <re_pri>news1</re_pri>
+        </r_ele>
+        <sense>
+            <pos>&n;</pos>
+            <pos>&adj-i;</pos>
+            <xref>word</xref>
+            <xref>word・reading</xref>
+            <xref>word・1</xref>
+            <xref>word・reading・1</xref>
+            <ant>Antonym</ant>
+            <ant>Another antonym</ant>
+            <field>&biol;</field>
+            <field>&biochem;</field>
+            <misc>Some misc information</misc>
+            <misc>Some other misc information</misc>
+            <s_inf>Some additional information</s_inf>
+            <s_inf>Some other additional information</s_inf>
+            <lsource xml:lang="eng">Source</lsource>
+            <lsource xml:lang="fra">Source</lsource>
+            <lsource xml:lang="ger" ls_type="part">Source</lsource>
+            <lsource xml:lang="dut" ls_type="part" ls_wasei="y">Source</lsource>
+            <dial>&hob;</dial>
+            <dial>&ksb;</dial>
+            <gloss xml:lang="eng">Japan</gloss>
+            <gloss xml:lang="rus">Japan</gloss>
+            <gloss xml:lang="dut" g_gend="feminine">Japan</gloss>
+            <gloss xml:lang="fra" g_gend="masculine" g_type="tm">Japan</gloss>
+        </sense>
+    </entry>
+</JMdict>
