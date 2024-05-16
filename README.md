@@ -32,6 +32,6 @@ const entries = jmdict.entries;
 ```typescript
 import { JMdictParser } from 'jmdict.js';
 
-const jmdict = await JMdictParser.fromFile('pathToJMdictFile.xml');
+const jmdict = await JMdictParser.fromXmlFile('pathToJMdictFile.xml');
 const entries = jmdict.entries;
 ```
