@@ -1,0 +1,20 @@
+[
+    {
+        "id": "100",
+        "readings": [
+            {
+                "reading": "日本"
+            }
+        ],
+        "senses": [
+            {
+                "glosses": [
+                    {
+                        "language": "eng",
+                        "gloss": "Japan"
+                    }
+                ]
+            }
+        ]
+    }
+]

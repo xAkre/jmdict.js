@@ -22,6 +22,7 @@ npm install jmdict.js
 ## Features
 
 -   Parse JMdict files and XML strings into typesafe objects
+-   Write JMdict objects to JSON files
 
 ## Usage
 
@@ -43,4 +44,13 @@ import { JMdictParser } from 'jmdict.js';
 
 const jmdict = await JMdictParser.fromXmlFile('pathToJMdictFile.xml');
 const entries = jmdict.entries;
+```
+
+### Writing to a JSON file
+
+```typescript
+import { JMdictParser } from 'jmdict.js';
+
+const jmdict = await JMdictParser.fromXmlFile('pathToJMdictFile.xml');
+jmdict.writeToJsonFile('pathToOutputFile.json');
 ```
