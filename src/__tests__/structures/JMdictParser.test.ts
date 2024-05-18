@@ -1,5 +1,5 @@
 import { describe, test, expect } from '@jest/globals';
-import { unlinkSync, readFileSync } from 'fs';
+import { readFileSync } from 'fs';
 import { join } from 'path';
 import { JMdictParser } from '@/structures';
 import { expectedObject as mininalEntryExpectedObject } from '../data/expectedObjects/minimalEntry';
@@ -43,7 +43,5 @@ describe('JMdictParser', () => {
 
         const entry = jmdict.entries[0];
         expect(entry).toEqual(fullDataEntryExpectedObject);
-
-        unlinkSync(filePath);
     });
 });
