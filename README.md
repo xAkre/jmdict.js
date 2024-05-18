@@ -1,4 +1,13 @@
-# [jmdict.js](https://www.npmjs.com/package/jmdict.js)
+<div style="display:flex; gap: 5px;">
+    <a href="https://npmcharts.com/compare/jmdict.js">
+        <img src="https://img.shields.io/npm/dm/jmdict.js.svg">
+    </a>
+    <a href="https://packagephobia.com/result?p=jmdict.js">
+        <img src="https://packagephobia.com/badge?p=jmdict.js" alt="install size">
+    </a>
+</div>
+
+# jmdict.js
 
 [jmdict.js](https://www.npmjs.com/package/jmdict.js) is a library for working with [JMdict Japanese dictionary files.](http://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project)
 
