@@ -1,6 +1,6 @@
 {
     "name": "jmdict.js",
-    "version": "0.0.6",
+    "version": "0.1.0",
     "description": "jmdict.js is a library for working with JMdict",
     "main": "dist/index.js",
     "files": [
@@ -11,6 +11,9 @@
         "format": "prettier --write .",
         "lint": "eslint . --ext .ts",
         "test": "jest"
+    },
+    "bin": {
+        "jmdictjs": "dist/bin/cli.js"
     },
     "repository": {
         "type": "git",
@@ -27,11 +30,13 @@
     },
     "homepage": "https://github.com/xAkre/jmdict.js#readme",
     "dependencies": {
-        "xml2js": "^0.6.2"
+        "xml2js": "^0.6.2",
+        "yargs": "^17.7.2"
     },
     "devDependencies": {
         "@types/node": "^20.12.12",
         "@types/xml2js": "^0.4.14",
+        "@types/yargs": "^17.0.32",
         "@typescript-eslint/eslint-plugin": "^7.9.0",
         "@typescript-eslint/parser": "^7.9.0",
         "eslint": "^8.57.0",

@@ -19,6 +19,6 @@ describe('JMdict', () => {
         );
 
         unlinkSync(jsonFilePath);
-        expect(data === expectedData);
+        expect(JSON.parse(data)).toEqual(JSON.parse(expectedData));
     });
 });

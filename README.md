@@ -23,6 +23,7 @@ npm install jmdict.js
 
 -   Parse JMdict files and XML strings into typesafe objects
 -   Write JMdict objects to JSON files
+-   CLI for converting JMdict files to JSON
 
 ## Usage
 
@@ -53,4 +54,12 @@ import { JMdictParser } from 'jmdict.js';
 
 const jmdict = await JMdictParser.fromXmlFile('pathToJMdictFile.xml');
 jmdict.writeToJsonFile('pathToOutputFile.json');
+```
+
+### Using the CLI
+
+To convert a JMdict file to JSON, you can use the CLI:
+
+```bash
+jmdictjs convert -i pathToJMdictFile.xml -o pathToOutputFile.json
 ```
