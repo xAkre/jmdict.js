@@ -248,6 +248,7 @@ class JMdictParser {
      * @private
      * @static
      * @param senseElement - The sense element parsed using xml2js
+     * @param lastPartsOfSpeech - The parts of speech of the previous sense
      * @returns A JMdictSenseElement object
      * @throws {ParseError} If the sense element is missing glosses
      */
