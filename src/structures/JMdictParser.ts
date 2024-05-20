@@ -380,7 +380,7 @@ class JMdictParser {
      *
      * @private
      * @static
-     * @param gloss - The gloss parsed using xml2js
+     * @param parsedGloss - The gloss parsed using xml2js
      * @returns A JMdictGloss object
      */
     private static transformParsedGloss(parsedGloss: ParsedGloss): JMdictGloss {

@@ -96,7 +96,7 @@ interface JMdictReadingElement {
     additionalInformation?: string[];
 
     /**
-     * Same as {@link KanjiElement.priority}, but for the reading element
+     * Same as {@link JMdictKanjiElement.priority}, but for the reading element
      */
     priority?: JMdictPriority[];
 }
