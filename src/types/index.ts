@@ -169,7 +169,7 @@ interface JMdictSenseElement {
     /**
      * This array contains glosses that provide translated equivalents of the Japanese word
      */
-    glosses: JMdictGloss[];
+    glosses?: JMdictGloss[];
 }
 
 /**
@@ -201,7 +201,7 @@ type JMdictLanguageSource =
           /**
            * The word in the source language
            */
-          word: string;
+          word?: string;
 
           /**
            * The language code of the source language
@@ -568,12 +568,12 @@ interface ParsedSenseElement {
     s_inf?: string[];
     lsource?: ParsedLanguageSource[];
     dial?: string[];
-    gloss: ParsedGloss[];
+    gloss?: ParsedGloss[];
 }
 
 interface ParsedLanguageSource {
     _: string;
-    $: {
+    $?: {
         'xml:lang'?: string;
         ls_type?: string;
         ls_wasei?: string;

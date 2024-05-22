@@ -264,7 +264,7 @@ class JMdictParser {
             this.transformParsedCrossReference(crossReference)
         );
 
-        const glosses = senseElement.gloss.map((gloss) =>
+        const glosses = senseElement.gloss?.map((gloss) =>
             this.transformParsedGloss(gloss)
         );
 
@@ -316,17 +316,11 @@ class JMdictParser {
             };
         }
 
-        const word = languageSource._;
-
-        if (!word) {
-            throw new ParseError('Language source is missing word');
-        }
-
         return {
-            word,
-            language: languageSource.$['xml:lang'] ?? 'eng',
-            type: languageSource.$.ls_type === 'part' ? 'partial' : 'full',
-            wasei: languageSource.$.ls_wasei ? true : undefined
+            word: languageSource._,
+            language: languageSource.$?.['xml:lang'] ?? 'eng',
+            type: languageSource.$?.ls_type === 'part' ? 'partial' : 'full',
+            wasei: languageSource.$?.ls_wasei ? true : undefined
         };
     }
 
@@ -392,16 +386,16 @@ class JMdictParser {
         }
 
         const gloss: JMdictGloss = {
-            language: parsedGloss.$['xml:lang']
+            language: parsedGloss.$?.['xml:lang']
                 ? parsedGloss.$['xml:lang']
                 : 'eng',
             gloss: parsedGloss._,
-            gender: parsedGloss.$.g_gend
-                ? (parsedGloss.$.g_gend as JMdictGlossGender)
+            gender: parsedGloss.$?.g_gend
+                ? (parsedGloss.$?.g_gend as JMdictGlossGender)
                 : undefined
         };
 
-        if (parsedGloss.$.g_type) {
+        if (parsedGloss.$?.g_type) {
             switch (parsedGloss.$.g_type) {
                 case 'expl':
                     gloss.type = 'explanation';
