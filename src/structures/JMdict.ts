@@ -1,5 +1,5 @@
 import { PathLike, writeFileSync } from 'fs';
-import { JMdictEntry } from '@/types';
+import { JMdictEntry } from '@/types/jmdict';
 
 class JMdict {
     entries: JMdictEntry[];

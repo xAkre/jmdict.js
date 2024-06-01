@@ -1,4 +1,4 @@
-import { JMdictEntry } from '@/types';
+import { JMdictEntry } from '@/types/jmdict';
 
 /**
  * Expected object for: {@link '../xml/minimalEntry.xml'}
