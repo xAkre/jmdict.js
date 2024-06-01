@@ -20,7 +20,7 @@ interface ParsedKanjiDicCharacter {
     codepoint: ParsedKanjiDicCodepoint[];
     radical: ParsedKanjiDicRadical[];
     misc: ParsedKanjiDicMisc[];
-    dic_number?: ParsedKanjiDicMiscDicNumber[];
+    dic_number?: ParsedKanjiDicDicNumber[];
     query_code?: ParsedKanjiDicQueryCode[];
     reading_meaning?: ParsedKanjiDicReadingMeaning[];
 }
@@ -68,7 +68,7 @@ interface ParsedKanjiDicMiscVariant {
     };
 }
 
-interface ParsedKanjiDicMiscDicNumber {
+interface ParsedKanjiDicDicNumber {
     dic_ref: {
         _: string;
         $: {
@@ -148,7 +148,7 @@ export {
     ParsedKanjiDicRadical,
     ParsedKanjiDicMisc,
     ParsedKanjiDicMiscVariant,
-    ParsedKanjiDicMiscDicNumber,
+    ParsedKanjiDicDicNumber,
     ParsedKanjiDicQueryCode,
     ParsedKanjiDicReadingMeaning,
     ParsedKanjiDicReadingMeaningGroup
