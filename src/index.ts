@@ -13,5 +13,5 @@ export {
     JMdictGlossType,
     JMdictEntityMap,
     JMdictPriority
-} from '@/types';
+} from '@/types/jmdict';
 export { defaultEntityMap } from '@/util/defaults';
