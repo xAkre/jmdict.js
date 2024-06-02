@@ -1,4 +1,4 @@
-export { JMdictParser, JMdict } from '@/structures';
+export { JMdictParser, JMdict, KanjiDicParser } from '@/structures';
 export { ParseError } from '@/errors';
 export {
     JMdictEntry,
