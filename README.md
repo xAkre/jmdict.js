@@ -9,7 +9,7 @@
 
 # jmdict.js
 
-[jmdict.js](https://www.npmjs.com/package/jmdict.js) is a library for working with [JMdict Japanese dictionary files.](http://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project)
+[jmdict.js](https://www.npmjs.com/package/jmdict.js) is a library for working with [JMdict Japanese dictionary files](http://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project) and [KanjiDic2 kanji dictionary files](https://www.edrdg.org/wiki/index.php/KANJIDIC_Project)
 
 ## Installation
 
@@ -23,11 +23,13 @@ npm install jmdict.js
 
 -   Parse JMdict files and XML strings into typesafe objects
 -   Write JMdict objects to JSON files
+-   Parse KanjiDic2 files and XML strings into typesafe objects
+-   Write KanjiDic2 objects to JSON files
 -   CLI for converting JMdict files to JSON
 
 ## Usage
 
-### Parsing from an XML string
+### Parsing a JMdict from an XML string
 
 ```typescript
 import { readFileSync } from 'fs';
@@ -38,7 +40,7 @@ const jmdict = await JMdictParser.fromXmlString(xmlString);
 const entries = jmdict.entries;
 ```
 
-### Parsing from a file
+### Parsing a JMdict from a file
 
 ```typescript
 import { JMdictParser } from 'jmdict.js';
@@ -56,6 +58,10 @@ const jmdict = await JMdictParser.fromXmlFile('pathToJMdictFile.xml');
 jmdict.writeToJsonFile('pathToOutputFile.json');
 ```
 
+### KanjiDic2
+
+The KanjiDic2 parser works just like the JMdict parser, but with the `KanjiDicParser` class
+
 ### Using the CLI
 
 To convert a JMdict file to JSON, you can use the CLI:
@@ -63,3 +69,5 @@ To convert a JMdict file to JSON, you can use the CLI:
 ```bash
 jmdictjs convert -i pathToJMdictFile.xml -o pathToOutputFile.json
 ```
+
+Converting KanjiDic2 files is not yet supported in the CLI
