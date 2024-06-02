@@ -1,6 +1,6 @@
 {
     "name": "jmdict.js",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "description": "jmdict.js is a library for working with JMdict",
     "main": "dist/index.js",
     "files": [
@@ -30,6 +30,7 @@
     },
     "homepage": "https://github.com/xAkre/jmdict.js#readme",
     "dependencies": {
+        "sax": "^1.4.1",
         "xml2js": "^0.6.2",
         "yargs": "^17.7.2"
     },

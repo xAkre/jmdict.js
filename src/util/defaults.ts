@@ -1,4 +1,4 @@
-import { JMdictEntityMap } from '@/types';
+import { JMdictEntityMap } from '@/types/jmdict';
 
 /**
  * Default entity map for JMdict entities taken from the original JMdict DTD

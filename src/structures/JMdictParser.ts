@@ -17,7 +17,7 @@ import {
     ParsedSenseElement,
     ParsedLanguageSource,
     ParsedGloss
-} from '@/types';
+} from '@/types/jmdict';
 import { ParseError } from '@/errors';
 import { JMdict } from '@/structures';
 import { defaultEntityMap } from '@/util/defaults';

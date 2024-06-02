@@ -1,4 +1,4 @@
-export { JMdictParser, JMdict } from '@/structures';
+export { JMdictParser, JMdict, KanjiDicParser } from '@/structures';
 export { ParseError } from '@/errors';
 export {
     JMdictEntry,
@@ -13,5 +13,5 @@ export {
     JMdictGlossType,
     JMdictEntityMap,
     JMdictPriority
-} from '@/types';
+} from '@/types/jmdict';
 export { defaultEntityMap } from '@/util/defaults';
