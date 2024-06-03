@@ -1,5 +1,4 @@
 import { readFileSync, unlinkSync } from 'fs';
-import { inspect } from 'util';
 import { join } from 'path';
 import { expect, describe, test } from '@jest/globals';
 import { JMdictParser } from '@/structures';
@@ -18,8 +17,6 @@ describe('JMdict', () => {
             join(__dirname, '..', 'data/expectedJson/fullDataEntry.json'),
             'utf-8'
         );
-
-        console.log(inspect(JSON.parse(data), false, null, true));
 
         unlinkSync(jsonFilePath);
         expect(JSON.parse(data)).toEqual(JSON.parse(expectedData));

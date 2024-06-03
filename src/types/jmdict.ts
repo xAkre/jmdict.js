@@ -199,7 +199,7 @@ type JMdictLanguageSource = {
     /**
      * The word in the source language
      */
-    word: string;
+    word?: string;
 
     /**
      * The language code of the source language
@@ -570,7 +570,7 @@ interface ParsedSenseElement {
 }
 
 interface ParsedLanguageSource {
-    _: string;
+    _?: string;
     $?: {
         'xml:lang'?: string;
         ls_type?: string;
