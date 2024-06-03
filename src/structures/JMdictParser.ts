@@ -264,9 +264,24 @@ class JMdictParser {
             this.transformParsedCrossReference(crossReference)
         );
 
-        const glosses = senseElement.gloss?.map((gloss) =>
-            this.transformParsedGloss(gloss)
-        );
+        const glosses = senseElement.gloss
+            ?.filter((gloss) => {
+                /* Sometimes glosses are empty, which makes no sense, but oh well. This filters out the empty ones */
+                if (typeof gloss == 'string') {
+                    if (gloss === '') {
+                        return false;
+                    } else {
+                        return true;
+                    }
+                }
+
+                if (!gloss._) {
+                    return false;
+                } else {
+                    return true;
+                }
+            })
+            .map((gloss) => this.transformParsedGloss(gloss));
 
         /* Parts of speech are inherited from the previous sense if they are not present */
         const partsOfSpeech = senseElement.pos
