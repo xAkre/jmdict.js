@@ -56,6 +56,7 @@
                 ],
                 "sourceLanguages": [
                     {
+                        "wasei": false,
                         "language": "eng",
                         "type": "full",
                         "word": "Source"
@@ -63,11 +64,13 @@
                     {
                         "language": "fra",
                         "type": "full",
+                        "wasei": false,
                         "word": "Source"
                     },
                     {
                         "language": "ger",
                         "type": "partial",
+                        "wasei": false,
                         "word": "Source"
                     },
                     {

@@ -312,7 +312,8 @@ class JMdictParser {
             return {
                 word: languageSource,
                 language: 'eng',
-                type: 'full'
+                type: 'full',
+                wasei: false
             };
         }
 
@@ -320,7 +321,7 @@ class JMdictParser {
             word: languageSource._,
             language: languageSource.$?.['xml:lang'] ?? 'eng',
             type: languageSource.$?.ls_type === 'part' ? 'partial' : 'full',
-            wasei: languageSource.$?.ls_wasei ? true : undefined
+            wasei: languageSource.$?.ls_wasei ? true : false
         };
     }
 

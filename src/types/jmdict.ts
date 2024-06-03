@@ -195,31 +195,29 @@ interface JMdictCrossReference {
 /**
  * Language sources are used to indicate the source language of a loan word
  */
-type JMdictLanguageSource =
-    | string
-    | {
-          /**
-           * The word in the source language
-           */
-          word?: string;
+type JMdictLanguageSource = {
+    /**
+     * The word in the source language
+     */
+    word: string;
 
-          /**
-           * The language code of the source language
-           */
-          language: string;
+    /**
+     * The language code of the source language
+     */
+    language: string;
 
-          /**
-           * Indicates whether the language source element fully or partially describes
-           * the source word or phrase of the loanword. Possible values are 'full' and 'partial'
-           */
-          type: JMdictLanguageSourceType;
+    /**
+     * Indicates whether the language source element fully or partially describes
+     * the source word or phrase of the loanword. Possible values are 'full' and 'partial'
+     */
+    type: JMdictLanguageSourceType;
 
-          /**
-           * Indicates that the Japanese word has been constructed from words in the
-           * source language, and not from an actual phrase in that language
-           */
-          wasei?: true;
-      };
+    /**
+     * Indicates that the Japanese word has been constructed from words in the
+     * source language, and not from an actual phrase in that language
+     */
+    wasei: boolean;
+};
 
 /**
  * Possible language source types

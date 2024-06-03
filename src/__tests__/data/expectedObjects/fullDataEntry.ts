@@ -62,17 +62,20 @@ const expectedObject: JMdictEntry = {
                 {
                     language: 'eng',
                     type: 'full',
-                    word: 'Source'
+                    word: 'Source',
+                    wasei: false
                 },
                 {
                     language: 'fra',
                     type: 'full',
-                    word: 'Source'
+                    word: 'Source',
+                    wasei: false
                 },
                 {
                     language: 'ger',
                     type: 'partial',
-                    word: 'Source'
+                    word: 'Source',
+                    wasei: false
                 },
                 {
                     language: 'dut',
