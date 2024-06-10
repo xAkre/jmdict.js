@@ -1,6 +1,6 @@
 {
     "name": "jmdict.js",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "description": "jmdict.js is a library for working with JMdict",
     "main": "dist/index.js",
     "files": [

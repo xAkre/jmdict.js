@@ -14,4 +14,15 @@ export {
     JMdictEntityMap,
     JMdictPriority
 } from '@/types/jmdict';
+export {
+    KanjiDicCharacter,
+    KanjiDicReading,
+    KanjiDicMeaning,
+    KanjiDicQueryCode,
+    KanjiDicRadical,
+    KanjiDicCodePoint,
+    KanjiDicDicNumber,
+    KanjiDicMisc,
+    KanjiDicMiscVariant
+} from '@/types/kanjidic';
 export { defaultEntityMap } from '@/util/defaults';
